@@ -1,0 +1,44 @@
+
+
+print("Welcome to EquityNest")
+name = input("What is your Name?")
+print("Welcome,", name,",to EquityNest where we will help you achieve homeownership! To get started on your investment portfolio, we will need a few more details")
+income = input ("What is your yearly income?")
+price= input ("What is the projected price of your future home?")
+time = input("What is your approximate timeline for acquisition?")
+risk = input("What level of risk are you willing to take? Please answer low, medium, high")
+
+
+# the following code represents inputting the user inputs into the SQL storage database to store customer information.
+
+"""
+import mysql.connector
+
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="paulina",
+    password="PASSWORD",
+    database="equitynest"
+)
+
+mycursor = mydb.cursor()
+
+sql = "INSERT INTO client (name, income, price, time, risk) VALUES (%s, %s)"
+val = (name, income, price, time, risk)
+mycursor.execute(sql, val)
+mydb.commit()
+print(mycursor.rowcount, "record insertion complete")
+
+"""
+#The following code uses a python library that would be very similar to what we would do with assets and a higher variety of different yielding investments that we would be tracking and managing.
+#from empyrial import empyrial, Engine
+
+#portfolio = Engine(
+    #start_date = "2024-01-01",
+    #portfolio = ["BABA", "PDD", "KO", "AMD","^IXIC"],
+    #optimizer = "EF",
+    #rebalance = "monthly"  # rebalance every year
+    risk_manager = {"Max Drawdown": -0.2}
+#)
+
+#empyrial(portfolio)
